@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-conventional": "^17.4.2",
     "@types/jest": "^26.0.21",
     "@types/jsonwebtoken": "^8.5.1",
     "@types/supertest": "^2.0.10",
@@ -28,6 +28,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-import-helpers": "^1.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "husky": "^8.0.3",
     "jest": "^26.6.3",
     "jest-mock-extended": "^1.0.13",
     "prettier": "^2.2.1",
@@ -53,6 +54,7 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-transform-typescript-metadata": "^0.3.1",
+    "commitizen": "^4.3.0",
     "continuation-local-storage": "^3.2.1",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
@@ -61,6 +63,7 @@
     "express-async-errors": "^3.1.1",
     "express-handler-errors": "^2.3.1",
     "express-request-id": "^1.4.1",
+    "init": "^0.1.2",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.3",
     "morgan-body": "^2.6.4",
@@ -71,6 +74,11 @@
     "typeorm": "^0.2.30",
     "winston": "^3.3.3",
     "yup": "0.28.5"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint - E HUSKY_GIT_PARAMS"
+    }
   },
   "config": {
     "commitizen": {
