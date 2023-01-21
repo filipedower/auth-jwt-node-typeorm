@@ -9,6 +9,7 @@ import express, {
 } from 'express'
 import { ErrorHandler } from "express-handler-errors"
 import morgan from 'morgan-body'
+import 'reflect-metadata'
 
 import logger from "@middlewares/logger"
 import routes from "./routes"
