@@ -11,6 +11,7 @@ import { ErrorHandler } from "express-handler-errors"
 import morgan from 'morgan-body'
 
 import logger from "@middlewares/logger"
+import routes from "./routes"
 
 class App {
     public readonly app: Application
@@ -21,6 +22,7 @@ class App {
         this.app = express()
         this.session = createNamespace('request')
         this.middlewares()
+        this.routes()
         this.errorHandle()
     }
 
@@ -63,6 +65,10 @@ class App {
                 new ErrorHandler().handle(err, res, next, logger as any)
             }
         )
+    }
+
+    private routes(): void {
+        this.app.use('/api', routes)
     }
 }
 
